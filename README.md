@@ -60,3 +60,14 @@ Map<String, Object> model = new HashMap<>();
       model.put("code", "548621");
       String html = FreeMarkerTemplateUtils.processTemplateIntoString(t, model);
 ```
+
+
+## Results
+
+With this version of the code, this is the email that was sent to my inbox:
+![image](https://user-images.githubusercontent.com/10344032/227000726-c788a7af-2b58-4c30-92d0-12951529ff12.png)
+
+I've used the following request to trigger the email:
+```bash
+curl -i -X POST -H "Content-Type:application/json"  -d  '{ "fromEmail": "contact@gustavoteixeira.dev", "toEmail": "iwhrim@gmail.com", "subject": "test email", "body": "Hi, This is a test email." }'  'http://localhost:8080/sendEmail'
+```
