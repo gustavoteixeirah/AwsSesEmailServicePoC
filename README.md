@@ -45,3 +45,18 @@ sequenceDiagram
     
 
 ```
+
+
+## Freemaker Template
+
+In order to generate the email, I've used Freemaker library for HTML parsing. Variables can be replaced by using this syntax:
+```html
+<p>Hello ${name}! This is the requested code: ${code}</p>
+```
+And in java:
+```java
+Map<String, Object> model = new HashMap<>();
+      model.put("name", "Gustavo Teixeira");
+      model.put("code", "548621");
+      String html = FreeMarkerTemplateUtils.processTemplateIntoString(t, model);
+```
