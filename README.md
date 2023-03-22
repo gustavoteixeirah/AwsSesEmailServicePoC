@@ -47,9 +47,9 @@ sequenceDiagram
 ```
 
 
-## Freemaker Template
+## Apache FreeMarker
 
-In order to generate the email, I've used Freemaker library for HTML parsing. Variables can be replaced by using this syntax:
+In order to generate the email, I've used Apache FreeMarker library for HTML parsing. Variables can be replaced by using this syntax:
 ```html
 <p>Hello ${name}! This is the requested code: ${code}</p>
 ```
